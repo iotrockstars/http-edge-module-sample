@@ -20,11 +20,15 @@ Container Create Options
 }
 ```
 
+### Sending a message
+
 This module allows you to inject any json to this module through http post.
 
 ```bash
 curl -d '{"temp":55.6, "hum":12.5}' -H "Content-Type: application/json" -X POST http://localhost:9000
 ```
+
+### Using Postman
 
 Also we can use Postman to test the module
 
