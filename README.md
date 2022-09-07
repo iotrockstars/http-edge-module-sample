@@ -2,6 +2,24 @@
 
 ## HTTP Module
 
+### Configuration
+
+Container Create Options
+
+```json
+{
+    "HostConfig": {
+        "PortBindings": {
+            "9000/tcp": [
+                {
+                    "HostPort": "9000"
+                }
+            ]
+        }
+    }
+}
+```
+
 This module allows you to inject any json to this module through http post.
 
 ```bash
