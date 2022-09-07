@@ -1,4 +1,8 @@
-# BNSF Demo
+# HTTP Edge Module Sample
+
+## Overview
+
+This is an example of how to create a module for IoT Edge that receives a message via an HTTP post, the module will receive it and convert it to a message to send upstream.
 
 ## HTTP Module
 
