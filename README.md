@@ -44,11 +44,8 @@ Select Raw and Json
 
 ```json
 {
-
-​    'temp':81,
-
-​    'hum':67.4
-
+​    "temp":81,
+​    "hum":67.4
 }
 ```
 
