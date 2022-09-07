@@ -11,9 +11,9 @@
             "loggingOptions": "",
             "registryCredentials": {
               "msftpathracr": {
-                "username": "$CONTAINER_REGISTRY_USERNAME_msftpathracr",
-                "password": "$CONTAINER_REGISTRY_PASSWORD_msftpathracr",
-                "address": "msftpathracr.azurecr.io"
+                "username": "$CONTAINER_REGISTRY_USERNAME",
+                "password": "$CONTAINER_REGISTRY_PASSWORD",
+                "address": "$CONTAINER_REGISTRY_ACR"
               }
             }
           }
@@ -57,16 +57,6 @@
           }
         },
         "modules": {
-          "test": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "${MODULES.test}",
-              "createOptions": {}
-            }
-          },
           "httpmodule": {
             "version": "1.0",
             "type": "docker",
@@ -94,8 +84,7 @@
       "properties.desired": {
         "schemaVersion": "1.1",
         "routes": {
-          "testToIoTHub": "FROM /messages/modules/test/outputs/* INTO $upstream",
-          "sensorTotest": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/test/inputs/input1\")"
+          "httpmoduleToIoTHub": "FROM /messages/modules/httpmodule/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
