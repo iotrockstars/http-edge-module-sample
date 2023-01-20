@@ -79,4 +79,5 @@ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 conne
 For more information 
 
 [Azure IoT Edge for Linux on Windows virtual switch creation](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-create-virtual-switch?view=iotedge-1.4)
+
 [Networking configuration for Azure IoT Edge for Linux on Windows](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-configure-iot-edge-for-linux-on-windows-networking?view=iotedge-1.4)
