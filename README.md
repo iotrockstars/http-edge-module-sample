@@ -63,7 +63,7 @@ Select Raw and Json
 
 ## If you are working with EFLOW
 
-If you want to connect to the port directly from the Windows host OS, you can use the EFLOW VM IP address + the port. To get the EFLOW VM IP, you can use the ```bash Get-EflowVmAddr```.
+If you want to connect to the port directly from the Windows host OS, you can use the EFLOW VM IP address + the port. To get the EFLOW VM IP, you can use the ```Get-EflowVmAddr```.
 
 If you want to connect from a different Windows device, there are two possible scenarios:
 
