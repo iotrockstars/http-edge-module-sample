@@ -61,3 +61,12 @@ Select Raw and Json
 
 ![image-20220907112451472](/assets/images/image-20220907112451472.png)
 
+## If you are working with EFLOW
+
+If you want to connect to the port directly from the Windows host OS, you can use the EFLOW VM IP address + the port. To get the EFLOW VM IP, you can use the Get-EflowVmAddr.
+
+If you want to connect from a different Windows device, there are two possible scenarios:
+
+Internal Switch with Win Server - you can use Static IP instead of DHCP and then use port forwarding to that static IP. For example, imagine your EFLOW VM has the 172.20.1.2 address, and you want to forward the port 8080, then on the Windows host OS you should run the following command: netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=172.20.1.2
+
+Default Switch with Win Client- you can use the EFLOW VM hostname + "mshome.net" instead of the static IP. For example, imagine your EFLOW VM has the "DESKTOP-TEST-EFLOW" hostname, and you want to forward the port 8080, then on the Windows host OS you should run the following command: netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=DESKTOP-TEST-EFLOW.mshome.net
