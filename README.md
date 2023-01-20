@@ -63,7 +63,7 @@ Select Raw and Json
 
 ## If you are working with EFLOW
 
-If you want to connect to the port directly from the Windows host OS, you can use the EFLOW VM IP address + the port. To get the EFLOW VM IP, you can use the Get-EflowVmAddr.
+If you want to connect to the port directly from the Windows host OS, you can use the EFLOW VM IP address + the port. To get the EFLOW VM IP, you can use the ```bash Get-EflowVmAddr```.
 
 If you want to connect from a different Windows device, there are two possible scenarios:
 
@@ -76,3 +76,7 @@ Default Switch with Win Client- you can use the EFLOW VM hostname + "mshome.net"
 ```bash
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=DESKTOP-TEST-EFLOW.mshome.net
 ```
+For more information 
+
+[Azure IoT Edge for Linux on Windows virtual switch creation](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-create-virtual-switch?view=iotedge-1.4)
+[Networking configuration for Azure IoT Edge for Linux on Windows](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-configure-iot-edge-for-linux-on-windows-networking?view=iotedge-1.4)
